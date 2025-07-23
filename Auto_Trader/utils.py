@@ -345,9 +345,9 @@ def preprocess_data(row_df, symbol):
     """
     append_df = row_df[["Date", "Close", "Volume", "High", "Low"]].copy()
 
-    df = load_historical_data(symbol)
-    if df is None:
-        return None
+      df = load_historical_data(symbol)
+      if df is None:
+          return None
 
     required_columns = {"Date", "Close", "Volume", "High", "Low"}
     if not required_columns.issubset(df.columns):
